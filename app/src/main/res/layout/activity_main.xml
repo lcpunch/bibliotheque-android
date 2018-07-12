@@ -16,15 +16,15 @@
             android:layout_width="match_parent"
             android:layout_height="148dp"
             android:gravity="center"
-            app:srcCompat="@android:drawable/btn_dialog" />
+            app:srcCompat="@android:drawable/btn_dialog" android:contentDescription="@string/todo" />
 
         <EditText
             android:id="@+id/usernameChamp"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="100dp"
+            android:layout_marginStart="100dp"
             android:ems="10"
-            android:hint="Username"
+            android:hint="@string/username"
             android:inputType="textPersonName"
             android:scrollHorizontally="false" />
 
@@ -32,24 +32,24 @@
             android:id="@+id/passwordChamp"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="100dp"
+            android:layout_marginStart="100dp"
             android:ems="10"
-            android:hint="Password"
+            android:hint="@string/password"
             android:inputType="textPassword" />
 
         <Button
             android:id="@+id/loginButton"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="125dp"
-            android:text="Login" />
+            android:layout_marginStart="125dp"
+            android:text="@string/login" />
 
         <Button
             android:id="@+id/resetPasswordButton"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="125dp"
-            android:text="Reset Password" />
+            android:layout_marginStart="125dp"
+            android:text="@string/reset_password" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -61,15 +61,15 @@
                 android:id="@+id/newAccountButton"
                 android:layout_width="152dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="125dp"
-                android:text="New Account" />
+                android:layout_marginStart="125dp"
+                android:text="@string/new_account" />
 
             <ImageButton
                 android:id="@+id/helpButton"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="175dp"
-                app:srcCompat="@android:drawable/ic_menu_help" />
+                android:layout_marginStart="175dp"
+                app:srcCompat="@android:drawable/ic_menu_help" android:contentDescription="@string/todo" />
         </LinearLayout>
 
     </LinearLayout>

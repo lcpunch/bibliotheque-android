@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.grasset.fernando.marguerite_bourgeoys.MesLivresActivity">
+    tools:context="com.grasset.fernando.marguerite_bourgeoys.RDV_Livre_Rare">
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,9 +16,68 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/mes_livres"
+            android:text="@string/rdv_livre_rare"
             android:textAlignment="center"
             android:textAllCaps="false" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioButtonTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/title" />
+
+            <RadioButton
+                android:id="@+id/radioButtonAuteur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/l_auteur" />
+
+            <RadioButton
+                android:id="@+id/radioButtonAnee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/ann_e" />
+
+            <RadioButton
+                android:id="@+id/radioButtonMaisonEdition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/maison_d_edition" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/rechercheBar"
+                android:layout_width="318dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:labelFor="@+id/rechercheBar" />
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5dp"
+                app:srcCompat="@android:drawable/btn_plus" android:contentDescription="@string/todo" />
+
+        </LinearLayout>
 
         <TableLayout
             android:layout_width="match_parent"
@@ -29,32 +89,32 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/tableTitleMesLivres"
+                    android:id="@+id/tableTitleRechercher"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:text="@string/title" />
 
                 <TextView
-                    android:id="@+id/tableAuteurMesLivres"
+                    android:id="@+id/tableAuteurRechercher"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:text="@string/auteur" />
 
                 <TextView
-                    android:id="@+id/tableRetourneMesLivres"
+                    android:id="@+id/tableAneeRechercher"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    android:text="@string/retourne" />
+                    android:text="@string/ann_e" />
 
                 <TextView
-                    android:id="@+id/tableRenouvelerMesLivres"
+                    android:id="@+id/tableReserverRechercher"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    android:text="@string/renouveler" />
+                    android:text="@string/rdv" />
 
             </TableRow>
 
@@ -89,7 +149,8 @@
                     android:layout_height="25dp"
                     android:layout_marginStart="65dp"
                     android:layout_marginEnd="50dp"
-                    app:srcCompat="@android:drawable/btn_star_big_on" android:contentDescription="@string/todo" />
+                    android:contentDescription="@string/todo"
+                    app:srcCompat="@android:drawable/btn_star_big_on" />
             </TableRow>
 
             <TableRow
@@ -194,84 +255,33 @@
                     app:srcCompat="@android:drawable/btn_star_big_on" android:contentDescription="@string/todo" />
             </TableRow>
 
-        </TableLayout>
-
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="40dp"
-            android:text="@string/rdv_livre_rare"
-            android:textAlignment="center"
-            android:textAllCaps="false" />
-
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp">
-
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="37dp">
 
                 <TextView
-                    android:id="@+id/tableTitleLivreRare"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="@string/title" />
-
-                <TextView
-                    android:id="@+id/tableAuteurLivreRare"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="@string/auteur" />
-
-                <TextView
-                    android:id="@+id/tibleRetourneLivreRare"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="@string/retourne" />
-
-                <TextView
-                    android:id="@+id/tableRenouvelerLivreRare"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="@string/renouveler" />
-
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/tableTitleLivreRare1"
+                    android:id="@+id/tableTitle5"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:text="@string/textview" />
 
                 <TextView
-                    android:id="@+id/tableAuteurLivreRare1"
+                    android:id="@+id/tableAuteur5"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:text="@string/textview" />
 
                 <TextView
-                    android:id="@+id/taleRetourneLivreRare1"
+                    android:id="@+id/tableRetourne5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:text="@string/textview" />
 
                 <ImageButton
-                    android:id="@+id/renouvelerButtonLivreRare1"
+                    android:id="@+id/renouvelerButton5"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
                     android:layout_marginStart="65dp"
@@ -281,104 +291,104 @@
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="37dp">
 
                 <TextView
-                    android:id="@+id/tableTitleLivreRare2"
+                    android:id="@+id/tableTitle6"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:text="@string/textview" />
 
                 <TextView
-                    android:id="@+id/tableAuteurLivreRare2"
+                    android:id="@+id/tableAuteur6"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:text="@string/textview" />
 
                 <TextView
-                    android:id="@+id/tableRetourneLivreRare2"
+                    android:id="@+id/tableRetourne6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:text="@string/textview" />
 
                 <ImageButton
-                    android:id="@+id/renouvelerButtonLivreRare2"
+                    android:id="@+id/renouvelerButton6"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
                     android:layout_marginStart="65dp"
                     android:layout_marginEnd="50dp"
-                    app:srcCompat="@android:drawable/btn_star_big_on" android:contentDescription="@string/todo" />
+                    app:srcCompat="@android:drawable/btn_star_big_on" android:contentDescription="@string/todo"/>
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="37dp">
 
                 <TextView
-                    android:id="@+id/tableTitleLivreRare3"
+                    android:id="@+id/tableTitle7"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:text="@string/textview" />
 
                 <TextView
-                    android:id="@+id/tableAuteurLivreRare3"
+                    android:id="@+id/tableAuteur7"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:text="@string/textview" />
 
                 <TextView
-                    android:id="@+id/tableRetourneLivreRare3"
+                    android:id="@+id/tableRetourne7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:text="@string/textview" />
 
                 <ImageButton
-                    android:id="@+id/renouvelerButtonLivreRare3"
+                    android:id="@+id/renouvelerButton7"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
                     android:layout_marginStart="65dp"
                     android:layout_marginEnd="50dp"
-                    app:srcCompat="@android:drawable/btn_star_big_on" android:contentDescription="@string/todo" />
+                    app:srcCompat="@android:drawable/btn_star_big_on" android:contentDescription="@string/todo"/>
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="37dp">
 
                 <TextView
-                    android:id="@+id/tableTitleLivreRare4"
+                    android:id="@+id/tableTitle8"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:text="@string/textview" />
 
                 <TextView
-                    android:id="@+id/tableAuteurLivreRare4"
+                    android:id="@+id/tableAuteur8"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:text="@string/textview" />
 
                 <TextView
-                    android:id="@+id/tableRetourneLivreRare4"
+                    android:id="@+id/tableRetourne8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:text="@string/textview" />
 
                 <ImageButton
-                    android:id="@+id/renouvelerButtonLivreRare4"
+                    android:id="@+id/renouvelerButton8"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
                     android:layout_marginStart="65dp"
                     android:layout_marginEnd="50dp"
-                    app:srcCompat="@android:drawable/btn_star_big_on" android:contentDescription="@string/todo" />
+                    app:srcCompat="@android:drawable/btn_star_big_on" android:contentDescription="@string/todo"/>
             </TableRow>
 
         </TableLayout>
@@ -418,5 +428,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="175dp"
             app:srcCompat="@android:drawable/ic_menu_help" android:contentDescription="@string/todo" />
+
+
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

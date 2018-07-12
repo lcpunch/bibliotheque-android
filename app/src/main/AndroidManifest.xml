@@ -17,7 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".ValidationActivity" />
-        <activity android:name=".MesLivresActivity"></activity>
+        <activity android:name=".MesLivresActivity" />
+        <activity android:name=".Rechercher" />
+        <activity android:name=".RDV_Livre_Rare"></activity>
     </application>
 
 </manifest>

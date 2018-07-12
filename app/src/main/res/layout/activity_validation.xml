@@ -16,15 +16,15 @@
             android:layout_width="match_parent"
             android:layout_height="148dp"
             android:gravity="center"
-            app:srcCompat="@android:drawable/btn_dialog" />
+            app:srcCompat="@android:drawable/btn_dialog" android:contentDescription="@string/todo" />
 
         <TextView
             android:id="@+id/messageAutentification"
             android:layout_width="match_parent"
             android:layout_height="151dp"
             android:layout_marginTop="30dp"
+            android:clickable="false"
             android:ems="10"
-            android:inputType="textMultiLine"
             android:padding="30dp"
             android:textAlignment="center"
             tools:text="aiuehiUAHEIUAHeiuAHEIUAHeiuaheiuahieuhAiuehaiuehIUehIUehiuAehiuAHEIUAheiuAHeiuAHEIUaheiuaheiuAHeiuEIEIUHUIEhAIUEHAIUehiuaHEIUaheiuaHEIUaHeiuaÇ" />
@@ -34,15 +34,15 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:layout_marginLeft="175dp"
+            android:layout_marginStart="175dp"
             android:layout_marginTop="35dp"
-            android:text="OK" />
+            android:text="@string/ok" />
 
         <ImageButton
             android:id="@+id/helpButton"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="175dp"
-            app:srcCompat="@android:drawable/ic_menu_help" />
+            android:layout_marginStart="175dp"
+            app:srcCompat="@android:drawable/ic_menu_help" android:contentDescription="@string/todo" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
