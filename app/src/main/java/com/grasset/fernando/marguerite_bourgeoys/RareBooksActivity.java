@@ -1,31 +1,30 @@
 package com.grasset.fernando.marguerite_bourgeoys;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.RadioButton;
 
-public class MainActivity extends AppCompatActivity {
+public class RareBooksActivity extends AppCompatActivity {
 
-    private Button newAccountButton,loginButton;
+    RadioButton radioButtonSearch,radioButtonMyBooks;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_rdv__livre__rare);
 
-
-        newAccountButton = (Button) findViewById(R.id.newAccountButton);
-        newAccountButton.setOnClickListener(new View.OnClickListener() {
+        radioButtonSearch = findViewById(R.id.radioButtonSearch);
+        radioButtonSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SignupActivity();
+                SearchActivity();
             }
         });
 
-        loginButton = (Button) findViewById(R.id.loginButton);
-        loginButton.setOnClickListener(new View.OnClickListener() {
+        radioButtonMyBooks = findViewById(R.id.radioButtonMyBooks);
+        radioButtonMyBooks.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 MyBooksActivity();
@@ -33,8 +32,8 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void SignupActivity() {
-        Intent intent = new Intent(this, SignupActivity.class);
+    private void SearchActivity() {
+        Intent intent = new Intent(this, SearchActivity.class);
         startActivity(intent);
     }
     private void MyBooksActivity() {

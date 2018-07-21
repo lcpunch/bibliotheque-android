@@ -1,31 +1,31 @@
 package com.grasset.fernando.marguerite_bourgeoys;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.RadioButton;
 
-public class MainActivity extends AppCompatActivity {
+public class SearchActivity extends AppCompatActivity {
 
-    private Button newAccountButton,loginButton;
+    RadioButton radioButtonRareBooks,radioButtonMyBooks;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_rechercher);
 
 
-        newAccountButton = (Button) findViewById(R.id.newAccountButton);
-        newAccountButton.setOnClickListener(new View.OnClickListener() {
+        radioButtonRareBooks = findViewById(R.id.radioButtonRareBooks);
+        radioButtonRareBooks.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SignupActivity();
+                RareBooksActivity();
             }
         });
 
-        loginButton = (Button) findViewById(R.id.loginButton);
-        loginButton.setOnClickListener(new View.OnClickListener() {
+        radioButtonMyBooks = findViewById(R.id.radioButtonMyBooks);
+        radioButtonMyBooks.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 MyBooksActivity();
@@ -33,10 +33,11 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void SignupActivity() {
-        Intent intent = new Intent(this, SignupActivity.class);
+    private void RareBooksActivity() {
+        Intent intent = new Intent(this, RareBooksActivity.class);
         startActivity(intent);
     }
+
     private void MyBooksActivity() {
         Intent intent = new Intent(this, MyBooksActivity.class);
         startActivity(intent);

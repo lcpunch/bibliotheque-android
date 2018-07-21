@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.grasset.fernando.marguerite_bourgeoys.RDV_Livre_Rare">
+    tools:context="com.grasset.fernando.marguerite_bourgeoys.RareBooksActivity">
 
 
     <LinearLayout
@@ -396,25 +396,26 @@
         <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="25dp">
+            android:layout_marginTop="25dp"
+            android:checkedButton="@+id/radioButtonRareBooks"
+            android:orientation="horizontal">
 
             <RadioButton
-                android:id="@+id/radioButton3"
+                android:id="@+id/radioButtonRareBooks"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/rdv_livre_rare" />
 
             <RadioButton
-                android:id="@+id/radioButton2"
+                android:id="@+id/radioButtonMyBooks"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/meslivres" />
 
             <RadioButton
-                android:id="@+id/radioButton"
+                android:id="@+id/radioButtonSearch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

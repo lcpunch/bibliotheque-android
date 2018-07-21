@@ -6,28 +6,29 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class ValidationActivity extends AppCompatActivity {
+public class SignupActivity extends AppCompatActivity {
 
-    Button confirmationButton;
+    Button signupButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_validation);
+        setContentView(R.layout.activity_signup);
 
 
-        confirmationButton = (Button) findViewById(R.id.confirmationButton);
-
-        confirmationButton.setOnClickListener(new View.OnClickListener() {
+        signupButton = (Button) findViewById(R.id.signupButton);
+        signupButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MainActivity();
+                ValidationActivity();
             }
         });
     }
 
-    private void MainActivity() {
-        Intent intent = new Intent(this, MainActivity.class);
+    private void ValidationActivity() {
+        Intent intent = new Intent(this, ValidationActivity.class);
         startActivity(intent);
     }
 }
+
+

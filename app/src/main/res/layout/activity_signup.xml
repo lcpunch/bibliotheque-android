@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Nom"
+        android:hint="@string/nom"
         android:inputType="textPersonName" />
 
     <EditText
@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="Prènom"
+        android:hint="@string/pr_nom"
         android:inputType="textPersonName" />
 
     <RadioGroup
@@ -29,25 +29,25 @@
         android:orientation="horizontal">
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/radioButtonMyBooks"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Passport" />
+            android:text="@string/passport" />
 
         <RadioButton
             android:id="@+id/radioButton3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Identité" />
+            android:text="@string/identit" />
 
         <RadioButton
             android:id="@+id/radioButton4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Carte d'étudiant" />
+            android:text="@string/carte_d_tudiant" />
     </RadioGroup>
 
     <EditText
@@ -56,7 +56,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="Piece d'identité"
+        android:hint="@string/piece_d_identit"
         android:inputType="textPersonName" />
 
     <EditText
@@ -65,7 +65,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="Adresse"
+        android:hint="@string/adresse"
         android:inputType="textPersonName" />
 
     <EditText
@@ -74,8 +74,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="Numéro de telephone"
-        android:inputType="textPersonName" />
+        android:hint="@string/num_ro_de_telephone"
+        android:inputType="textPersonName|phone" />
 
     <EditText
         android:id="@+id/email"
@@ -83,14 +83,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="E-mail"
-        android:inputType="textPersonName" />
+        android:hint="@string/e_mail"
+        android:inputType="textPersonName|textWebEmailAddress" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/signupButton"
         android:layout_width="332dp"
         android:layout_height="wrap_content"
-        android:text="Sign up" />
+        android:text="@string/sign_up" />
 
 
 </LinearLayout>
