@@ -31,4 +31,8 @@
     <string name="sign_up">Sign up</string>
     <string name="e_mail">E-mail</string>
     <string name="num_ro_de_telephone">Numéro de telephone</string>
+    <string name="searchfield">searchField</string>
+    <string name="pick_date">pick_date</string>
+    <string name="annuler">Annuler</string>
+    <string name="date_rdv">Date RDV</string>
 </resources>

@@ -6,44 +6,45 @@
     android:padding="10dp">
 
     <EditText
-        android:id="@+id/name"
+        android:id="@+id/SURNAME"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="@string/nom"
+        android:hint="SURNAME"
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/prenom"
+        android:id="@+id/USERNAME"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="@string/pr_nom"
+        android:hint="USERNAME"
         android:inputType="textPersonName" />
 
     <RadioGroup
+        android:id="@+id/IDENTITYCARD"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:orientation="horizontal">
 
         <RadioButton
-            android:id="@+id/radioButtonMyBooks"
+            android:id="@+id/myPassport"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/passport" />
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/myIdentite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/identit" />
 
         <RadioButton
-            android:id="@+id/radioButton4"
+            android:id="@+id/myCarteEtudient"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -51,7 +52,7 @@
     </RadioGroup>
 
     <EditText
-        android:id="@+id/id"
+        android:id="@+id/IDUSER"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -60,7 +61,16 @@
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/address"
+        android:id="@+id/MD5PASSWORD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="MD5PASSWORD"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/ADDRESS"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -69,7 +79,7 @@
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/phone"
+        android:id="@+id/PHONE"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -78,7 +88,7 @@
         android:inputType="textPersonName|phone" />
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/EMAIL"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -91,6 +101,5 @@
         android:layout_width="332dp"
         android:layout_height="wrap_content"
         android:text="@string/sign_up" />
-
 
 </LinearLayout>

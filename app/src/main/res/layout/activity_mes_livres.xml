@@ -20,6 +20,7 @@
             android:textAllCaps="false" />
 
         <TableLayout
+            android:id="@+id/T1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp">
@@ -87,9 +88,10 @@
                     android:id="@+id/renouvelerButton1"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:layout_marginStart="65dp"
                     android:layout_marginEnd="50dp"
-                    app:srcCompat="@android:drawable/btn_star_big_on" android:contentDescription="@string/todo" />
+                    android:layout_marginStart="65dp"
+                    android:contentDescription="@string/todo"
+                    app:srcCompat="@android:drawable/btn_star_big_on" />
             </TableRow>
 
             <TableRow
@@ -121,9 +123,10 @@
                     android:id="@+id/renouvelerButton2"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:layout_marginStart="65dp"
                     android:layout_marginEnd="50dp"
-                    app:srcCompat="@android:drawable/btn_star_big_on" android:contentDescription="@string/todo" />
+                    android:layout_marginStart="65dp"
+                    android:contentDescription="@string/todo"
+                    app:srcCompat="@android:drawable/btn_star_big_on" />
             </TableRow>
 
             <TableRow
@@ -155,9 +158,10 @@
                     android:id="@+id/renouvelerButton3"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:layout_marginStart="65dp"
                     android:layout_marginEnd="50dp"
-                    app:srcCompat="@android:drawable/btn_star_big_on" android:contentDescription="@string/todo" />
+                    android:layout_marginStart="65dp"
+                    android:contentDescription="@string/todo"
+                    app:srcCompat="@android:drawable/btn_star_big_on" />
             </TableRow>
 
             <TableRow
@@ -189,9 +193,10 @@
                     android:id="@+id/renouvelerButton4"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:layout_marginStart="65dp"
                     android:layout_marginEnd="50dp"
-                    app:srcCompat="@android:drawable/btn_star_big_on" android:contentDescription="@string/todo" />
+                    android:layout_marginStart="65dp"
+                    android:contentDescription="@string/todo"
+                    app:srcCompat="@android:drawable/btn_star_big_on" />
             </TableRow>
 
         </TableLayout>
@@ -207,6 +212,7 @@
             android:textAllCaps="false" />
 
         <TableLayout
+            android:id="@+id/T2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp">
@@ -234,14 +240,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    android:text="@string/retourne" />
+                    android:text="@string/date_rdv" />
 
                 <TextView
                     android:id="@+id/tableRenouvelerLivreRare"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    android:text="@string/renouveler" />
+                    android:text="@string/annuler" />
 
             </TableRow>
 
@@ -274,9 +280,10 @@
                     android:id="@+id/renouvelerButtonLivreRare1"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:layout_marginStart="65dp"
                     android:layout_marginEnd="50dp"
-                    app:srcCompat="@android:drawable/btn_star_big_on" android:contentDescription="@string/todo" />
+                    android:layout_marginStart="65dp"
+                    android:contentDescription="@string/todo"
+                    app:srcCompat="@android:drawable/btn_star_big_on" />
             </TableRow>
 
             <TableRow
@@ -308,9 +315,10 @@
                     android:id="@+id/renouvelerButtonLivreRare2"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:layout_marginStart="65dp"
                     android:layout_marginEnd="50dp"
-                    app:srcCompat="@android:drawable/btn_star_big_on" android:contentDescription="@string/todo" />
+                    android:layout_marginStart="65dp"
+                    android:contentDescription="@string/todo"
+                    app:srcCompat="@android:drawable/btn_star_big_on" />
             </TableRow>
 
             <TableRow
@@ -342,9 +350,10 @@
                     android:id="@+id/renouvelerButtonLivreRare3"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:layout_marginStart="65dp"
                     android:layout_marginEnd="50dp"
-                    app:srcCompat="@android:drawable/btn_star_big_on" android:contentDescription="@string/todo" />
+                    android:layout_marginStart="65dp"
+                    android:contentDescription="@string/todo"
+                    app:srcCompat="@android:drawable/btn_star_big_on" />
             </TableRow>
 
             <TableRow
@@ -376,9 +385,10 @@
                     android:id="@+id/renouvelerButtonLivreRare4"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:layout_marginStart="65dp"
                     android:layout_marginEnd="50dp"
-                    app:srcCompat="@android:drawable/btn_star_big_on" android:contentDescription="@string/todo" />
+                    android:layout_marginStart="65dp"
+                    android:contentDescription="@string/todo"
+                    app:srcCompat="@android:drawable/btn_star_big_on" />
             </TableRow>
 
         </TableLayout>
@@ -387,7 +397,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
-            android:checkedButton="@+id/radioButtonMyBooks"
+            android:checkedButton="@+id/myPassport"
             android:orientation="horizontal">
 
             <RadioButton
@@ -398,7 +408,7 @@
                 android:text="@string/rdv_livre_rare" />
 
             <RadioButton
-                android:id="@+id/radioButtonMyBooks"
+                android:id="@+id/myPassport"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

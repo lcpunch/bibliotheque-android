@@ -20,9 +20,11 @@
             android:textAllCaps="false" />
 
         <RadioGroup
+            android:id="@+id/searchType"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
+            android:checkedButton="@+id/radioButtonTitle"
             android:orientation="horizontal">
 
             <RadioButton
@@ -65,337 +67,84 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
+                android:hint="@string/searchfield"
                 android:inputType="textPersonName"
                 android:labelFor="@+id/rechercheBar" />
 
             <ImageButton
-                android:id="@+id/imageButton"
+                android:id="@+id/searchButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:contentDescription="@string/todo"
                 android:padding="5dp"
-                app:srcCompat="@android:drawable/btn_plus" android:contentDescription="@string/todo" />
+                app:srcCompat="@android:drawable/btn_plus" />
 
         </LinearLayout>
 
-        <TableLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp">
+            android:layout_height="287dp">
 
-            <TableRow
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/tableTitleRechercher"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="@string/title" />
+                <TableLayout
+                    android:id="@+id/T1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp">
 
-                <TextView
-                    android:id="@+id/tableAuteurRechercher"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="@string/auteur" />
+                    <TableRow
+                        android:id="@+id/TR0"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/tableAneeRechercher"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="@string/ann_e" />
+                        <TextView
+                            android:id="@+id/tableTitleRechercher"
+                            android:layout_width="75dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="2"
+                            android:text="@string/title" />
 
-                <TextView
-                    android:id="@+id/tableReserverRechercher"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="@string/reserver" />
+                        <TextView
+                            android:id="@+id/tableAuteurRechercher"
+                            android:layout_width="75dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="2"
+                            android:text="@string/auteur" />
 
-            </TableRow>
+                        <TextView
+                            android:id="@+id/tableAneeRechercher"
+                            android:layout_width="75dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="2"
+                            android:text="@string/ann_e" />
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/tableReserverRechercher"
+                            android:layout_width="45dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:text="@string/reserver" />
 
-                <TextView
-                    android:id="@+id/tableTitle1"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="@string/textview" />
+                    </TableRow>
 
-                <TextView
-                    android:id="@+id/tableAuteur1"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="@string/textview" />
+                </TableLayout>
 
-                <TextView
-                    android:id="@+id/tableRetourne1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="@string/textview" />
-
-                <ImageButton
-                    android:id="@+id/renouvelerButton1"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_marginStart="65dp"
-                    android:layout_marginEnd="50dp"
-                    android:contentDescription="@string/todo"
-                    app:srcCompat="@android:drawable/btn_star_big_on" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/tableTitle2"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="@string/textview" />
-
-                <TextView
-                    android:id="@+id/tableAuteur2"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="@string/textview" />
-
-                <TextView
-                    android:id="@+id/tableRetourne2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="@string/textview" />
-
-                <ImageButton
-                    android:id="@+id/renouvelerButton2"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_marginStart="65dp"
-                    android:layout_marginEnd="50dp"
-                    app:srcCompat="@android:drawable/btn_star_big_on" android:contentDescription="@string/todo" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/tableTitle3"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="@string/textview" />
-
-                <TextView
-                    android:id="@+id/tableAuteur3"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="@string/textview" />
-
-                <TextView
-                    android:id="@+id/tableRetourne3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="@string/textview" />
-
-                <ImageButton
-                    android:id="@+id/renouvelerButton3"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_marginStart="65dp"
-                    android:layout_marginEnd="50dp"
-                    app:srcCompat="@android:drawable/btn_star_big_on" android:contentDescription="@string/todo" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="37dp">
-
-                <TextView
-                    android:id="@+id/tableTitle4"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="@string/textview" />
-
-                <TextView
-                    android:id="@+id/tableAuteur4"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="@string/textview" />
-
-                <TextView
-                    android:id="@+id/tableRetourne4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="@string/textview" />
-
-                <ImageButton
-                    android:id="@+id/renouvelerButton4"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_marginStart="65dp"
-                    android:layout_marginEnd="50dp"
-                    app:srcCompat="@android:drawable/btn_star_big_on" android:contentDescription="@string/todo" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="37dp">
-
-                <TextView
-                    android:id="@+id/tableTitle5"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="@string/textview" />
-
-                <TextView
-                    android:id="@+id/tableAuteur5"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="@string/textview" />
-
-                <TextView
-                    android:id="@+id/tableRetourne5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="@string/textview" />
-
-                <ImageButton
-                    android:id="@+id/renouvelerButton5"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_marginStart="65dp"
-                    android:layout_marginEnd="50dp"
-                    app:srcCompat="@android:drawable/btn_star_big_on" android:contentDescription="@string/todo" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="37dp">
-
-                <TextView
-                    android:id="@+id/tableTitle6"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="@string/textview" />
-
-                <TextView
-                    android:id="@+id/tableAuteur6"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="@string/textview" />
-
-                <TextView
-                    android:id="@+id/tableRetourne6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="@string/textview" />
-
-                <ImageButton
-                    android:id="@+id/renouvelerButton6"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_marginStart="65dp"
-                    android:layout_marginEnd="50dp"
-                    app:srcCompat="@android:drawable/btn_star_big_on" android:contentDescription="@string/todo"/>
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="37dp">
-
-                <TextView
-                    android:id="@+id/tableTitle7"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="@string/textview" />
-
-                <TextView
-                    android:id="@+id/tableAuteur7"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="@string/textview" />
-
-                <TextView
-                    android:id="@+id/tableRetourne7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="@string/textview" />
-
-                <ImageButton
-                    android:id="@+id/renouvelerButton7"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_marginStart="65dp"
-                    android:layout_marginEnd="50dp"
-                    app:srcCompat="@android:drawable/btn_star_big_on" android:contentDescription="@string/todo"/>
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="37dp">
-
-                <TextView
-                    android:id="@+id/tableTitle8"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="@string/textview" />
-
-                <TextView
-                    android:id="@+id/tableAuteur8"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="@string/textview" />
-
-                <TextView
-                    android:id="@+id/tableRetourne8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="@string/textview" />
-
-                <ImageButton
-                    android:id="@+id/renouvelerButton8"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_marginStart="65dp"
-                    android:layout_marginEnd="50dp"
-                    app:srcCompat="@android:drawable/btn_star_big_on" android:contentDescription="@string/todo"/>
-            </TableRow>
-
-        </TableLayout>
+            </LinearLayout>
+        </ScrollView>
 
         <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="0dp"
             android:checkedButton="@+id/radioButtonSearch"
             android:orientation="horizontal">
 
@@ -407,7 +156,7 @@
                 android:text="@string/rdv_livre_rare" />
 
             <RadioButton
-                android:id="@+id/radioButtonMyBooks"
+                android:id="@+id/myPassport"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -424,10 +173,12 @@
 
         <ImageButton
             android:id="@+id/helpButton"
-            android:layout_width="50dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="175dp"
-            app:srcCompat="@android:drawable/ic_menu_help" android:contentDescription="@string/todo" />
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp"
+            android:contentDescription="@string/todo"
+            app:srcCompat="@android:drawable/ic_menu_help" />
 
 
     </LinearLayout>
