@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="100dp"
             android:ems="10"
-            android:hint="@string/username"
+            android:hint="@string/nom_d_utilisateur"
             android:inputType="textPersonName"
             android:scrollHorizontally="false" />
 
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="100dp"
             android:ems="10"
-            android:hint="@string/password"
+            android:hint="@string/mot_de_passe"
             android:inputType="textPassword" />
 
         <Button
@@ -35,14 +35,14 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="125dp"
-            android:text="@string/login" />
+            android:text="@string/connexion" />
 
         <Button
             android:id="@+id/resetPasswordButton"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="125dp"
-            android:text="@string/reset_password" />
+            android:text="@string/r_cup_rer_mon_mot_de_passe" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -55,7 +55,7 @@
                 android:layout_width="152dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="125dp"
-                android:text="@string/new_account" />
+                android:text="@string/nouveau_compte" />
 
         </LinearLayout>
 

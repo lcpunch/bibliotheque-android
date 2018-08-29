@@ -19,7 +19,6 @@ import java.util.Date;
 
 public class DbConnecteur {
     public void testDB() {
-
         try {
             Class.forName("com.mysql.jdbc.Driver").newInstance();
             Log.i("Android", " MySQL Connection ok");
@@ -371,4 +370,60 @@ public class DbConnecteur {
             Log.w("Android-system","system get connection");
         }
     }
+
+    public ArrayList<String> getUserInformation (String USERNAME) {
+        ArrayList myInformation = new ArrayList<String>();
+
+        try {
+            Class.forName("com.mysql.jdbc.Driver").newInstance();
+            Log.i("Android", " MySQL Connection ok");
+            Connection con = DriverManager.getConnection("jdbc:mysql://10.0.2.2:3306/biblioteca", "root", "7xpw2123lol123@mySQL");
+            //         System.out.println("Database connection success");
+            Log.d("Android2","Line 2");
+            String result = ("");
+            Log.d("Android3", " Line 3");
+            Statement st = con.createStatement();
+
+            ResultSet rs = st.executeQuery("SELECT ADDRESS,PHONE,EMAIL FROM user " +
+                    "WHERE IDUSER = '"+USERNAME+"';");
+
+            ResultSetMetaData rsmd = rs.getMetaData();
+
+            while (rs.next()) {
+                String address = rs.getString("ADDRESS");
+                myInformation.add(address);
+                String phone = rs.getString("PHONE");
+                myInformation.add(phone);
+                String email = rs.getString("EMAIL");
+                myInformation.add(email);
+
+
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            Log.w("Android-system","system get connection");
+        }
+        return myInformation;
+    }
+
+    public void UpdateUserInfo(ArrayList<String> myInfo, String IDUSER) {
+        try {
+            Class.forName("com.mysql.jdbc.Driver").newInstance();
+            Log.i("Android", " MySQL Connection ok");
+            Connection con = DriverManager.getConnection("jdbc:mysql://10.0.2.2:3306/biblioteca", "root", "7xpw2123lol123@mySQL");
+            //         System.out.println("Database connection success");
+            Log.d("Android2","Line 2");
+            String result = ("");
+            Log.d("Android3", " Line 3");
+            Statement st = con.createStatement();
+
+            st.executeUpdate(("UPDATE user\n" +
+                    "SET ADDRESS = '"+myInfo.get(0)+"', PHONE= '"+myInfo.get(1)+"', EMAIL = '"+myInfo.get(2)+"'\n" +
+                    "WHERE IDUSER = '"+IDUSER+"';"));
+        } catch (Exception e) {
+            e.printStackTrace();
+            Log.w("Android-system","system get connection");
+        }
+    }
+
 }

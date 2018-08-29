@@ -98,7 +98,7 @@
 
             <RadioGroup
                 android:id="@+id/periodeDate"
-                android:layout_width="104dp"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:checkedButton="@+id/radioButton2"
@@ -109,14 +109,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="AM" />
+                    android:text="@string/am" />
 
                 <RadioButton
                     android:id="@+id/radioButton3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="PM" />
+                    android:text="@string/pm" />
 
             </RadioGroup>
 

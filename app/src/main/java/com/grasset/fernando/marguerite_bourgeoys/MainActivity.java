@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         newAccountButton = (Button) findViewById(R.id.newAccountButton);
         newAccountButton.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -35,4 +35,18 @@
     <string name="pick_date">pick_date</string>
     <string name="annuler">Annuler</string>
     <string name="date_rdv">Date RDV</string>
+    <string name="connexion">Connexion</string>
+    <string name="r_cup_rer_mon_mot_de_passe">Récupérer mon mot de passe</string>
+    <string name="nouveau_compte">nouveau compte</string>
+    <string name="nom_d_utilisateur">Nom d\'utilisateur</string>
+    <string name="mot_de_passe">Mot de passe</string>
+    <string name="am">AM</string>
+    <string name="pm">PM</string>
+    <string name="nom_de_famille">Nom de famille</string>
+    <string name="t_l_phone">téléphone</string>
+    <string name="courriel">courriel</string>
+    <string name="address">Address</string>
+    <string name="phone">Phone</string>
+    <string name="email">Email</string>
+    <string name="save">Save</string>
 </resources>

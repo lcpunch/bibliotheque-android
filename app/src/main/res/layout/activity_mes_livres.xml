@@ -424,10 +424,11 @@
         </RadioGroup>
 
         <ImageButton
-            android:id="@+id/helpButton"
+            android:id="@+id/updateUserData"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="175dp"
-            app:srcCompat="@android:drawable/ic_menu_help" android:contentDescription="@string/todo" />
+            android:contentDescription="@string/todo"
+            app:srcCompat="@android:drawable/ic_menu_edit" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

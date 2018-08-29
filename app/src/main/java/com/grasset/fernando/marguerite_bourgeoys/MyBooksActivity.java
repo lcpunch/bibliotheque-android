@@ -7,6 +7,7 @@ import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -23,6 +24,7 @@ public class MyBooksActivity extends AppCompatActivity {
     ArrayList<Book> myBooks = new ArrayList<Book>();
     ArrayList<Book> myBooksRDV = new ArrayList<Book>();
     String IDUSER;
+    ImageButton updateButton;
 
 
     @Override
@@ -66,6 +68,15 @@ public class MyBooksActivity extends AppCompatActivity {
                 SearchActivity(IDUSER);
             }
         });
+
+        updateButton = findViewById(R.id.updateUserData);
+        updateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                UpdateStatusActivity(IDUSER);
+            }
+        });
+
     }
 
     private void RareBooksActivity(String IDUSER) {
@@ -75,6 +86,12 @@ public class MyBooksActivity extends AppCompatActivity {
     }
     private void SearchActivity(String IDUSER) {
         Intent intent = new Intent(this, SearchActivity.class);
+        intent.putExtra("IDUSER", IDUSER);
+        startActivity(intent);
+    }
+
+    private void UpdateStatusActivity(String IDUSER) {
+        Intent intent = new Intent(this, updateStatusActivity.class);
         intent.putExtra("IDUSER", IDUSER);
         startActivity(intent);
     }

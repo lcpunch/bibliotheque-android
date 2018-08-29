@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="SURNAME"
+        android:hint="@string/nom_de_famille"
         android:inputType="textPersonName" />
 
     <EditText
@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="USERNAME"
+        android:hint="@string/nom_d_utilisateur"
         android:inputType="textPersonName" />
 
     <RadioGroup
@@ -66,7 +66,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="MD5PASSWORD"
+        android:hint="@string/mot_de_passe"
         android:inputType="textPersonName" />
 
     <EditText
@@ -84,7 +84,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="@string/num_ro_de_telephone"
+        android:hint="@string/t_l_phone"
         android:inputType="textPersonName|phone" />
 
     <EditText
@@ -93,7 +93,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="@string/e_mail"
+        android:hint="@string/courriel"
         android:inputType="textPersonName|textWebEmailAddress" />
 
     <Button
